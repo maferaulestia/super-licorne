@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Final Project: CS 1220</title>
+  
+  
+  
+  
+  
+</head>
+
+<body>
+
+  <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" >
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+  </script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial;
+      padding: 10px;
+      background-image: linear-gradient(
+        to right,
+        #baffc9,
+        #ffffba,
+        #ffb3ba,
+        #bae1ff
+      );
+      background-size: cover;
+    }
+
+    .header {
+      background-image: url("http://magnolias.m.a.pic.centerblog.net/570d2560.png");
+      width: 100%;
+
+
+    }
+    .logo{
+      text-align: center;
+
+    }
+
+
+    }
+    .clearfix {
+      overflow: auto;
+    }
+
+
+    .header h1 {
+      font-family: "Fredericka the Great";
+      font-weight: lighter;
+      font-size: 13em;
+
+
+
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: turquoise;
+      border-radius: 15px;
+      font-family: lobster, cursive;
+      font-size: 1.2em;
+    }
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 20px 46px;
+      text-decoration: none;
+    }
+    a:nth-child(1) {
+      background: #ffb3f2;
+    }
+    a:nth-child(2) {
+      background: #ccb4ff;
+    }
+    a:nth-child(3) {
+      background: #b6cdff;
+    }
+    a:nth-child(4) {
+      background: #b4ffed;
+    }
+    a:nth-child(5) {
+      background: #b7f2b8;
+    }
+    #search {
+      padding: 15px;
+    }
+    .topnav p {
+      display: block;
+      float: right;
+      padding-right: 14px;
+    }
+    .topnav a:hover {
+      background-color: #ffff77;
+      color: black;
+      transform: scale(1.2);
+    }
+
+
+    button {
+      width: 100px;
+      -moz-box-shadow: 3px 4px 0px 0px #8a2a21;
+      -webkit-box-shadow: 3px 4px 0px 0px #8a2a21;
+      box-shadow: 3px 4px 0px 0px #8a2a21;
+      background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0.05, #f5a1d1),
+        color-stop(1, #fa52b7)
+      );
+      background: -moz-linear-gradient(top, #f5a1d1 5%, #fa52b7 100%);
+      background: -webkit-linear-gradient(top, #f5a1d1 5%, #fa52b7 100%);
+      background: -o-linear-gradient(top, #f5a1d1 5%, #fa52b7 100%);
+      background: -ms-linear-gradient(top, #f5a1d1 5%, #fa52b7 100%);
+      background: linear-gradient(to bottom, #f5a1d1 5%, #fa52b7 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(
+          startColorstr="#f5a1d1",
+          endColorstr="#fa52b7",
+          GradientType=0
+        );
+      background-color: #f5a1d1;
+      -moz-border-radius: 18px;
+      -webkit-border-radius: 18px;
+      border-radius: 18px;
+      border: 1px solid #d02718;
+      display: inline-block;
+      cursor: pointer;
+      color: #ffffff;
+      font-family: Arial;
+      font-size: 15px;
+      text-decoration: none;
+      text-shadow: 0px 1px 0px #810e05;
+    }
+    button:hover {
+      background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0.05, #fa52b7),
+        color-stop(1, #f5a1d1)
+      );
+      background: -moz-linear-gradient(top, #fa52b7 5%, #f5a1d1 100%);
+      background: -webkit-linear-gradient(top, #fa52b7 5%, #f5a1d1 100%);
+      background: -o-linear-gradient(top, #fa52b7 5%, #f5a1d1 100%);
+      background: -ms-linear-gradient(top, #fa52b7 5%, #f5a1d1 100%);
+      background: linear-gradient(to bottom, #fa52b7 5%, #f5a1d1 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(
+          startColorstr="#fa52b7",
+          endColorstr="#f5a1d1",
+          GradientType=0
+        );
+      background-color: #fa52b7;
+    }
+
+    .leftcolumn {
+      float: left;
+      width: 75%;
+    }
+
+    .productimages h2{
+      font-family: lobster;
+      text-align: center;
+
+
+    }
+
+
+
+
+
+    .rightcolumn {
+      float: left;
+      width: 25%;
+      padding-left: 20px;
+
+
+    }
+
+    .rightcolumn h2{
+      font-family: lobster;
+      text-align: center;
+      color: black;
+
+    }
+
+    .rightcolumn img{
+      margin: auto;
+    }
+
+
+
+
+    }
+    .fakeimage img {
+      max-height: 450px;
+      min-width: auto;
+    }
+
+
+
+
+    /*carousel settings */
+    .carousel-inner img {
+          width: 100%;
+          height: 100%;
+      }
+
+    /* try to change control carousel */
+    .carousel-indicators li {
+           box-shadow: inset 2px 2px 2px 2px rgba(0,0,0,0.5);       
+       list-style-type: square;
+    }
+
+
+
+    .carousel-inner > .item > img {
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      margin-top: 20px;
+
+    }
+
+    /* Product Block*/
+
+    .productimages h2{
+      padding: 1.2em;
+      font-size: 3em;
+      color: black;
+      background: linear-gradient( 0.10deg, #a5ddff	 30%,  #ffa6f2 100%, rgba(0, 0, 0, 0) 30%);
+
+    }
+
+    .tabcontent{
+      margin: auto;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    ul{
+      text-align: center;
+    }
+
+
+    ul.products li {
+        display: inline-block;
+      vertical-align: top;
+      padding: 1.2em;
+
+
+
+    }
+
+    ul.products li:hover{
+      transform: scale(1.06);
+       background-color: 	#ceffcf;
+      box-shadow: 10px 2px 8px #888888;
+    }
+
+
+    ul.products img{
+      width: 300px;
+      max-height: 300px;
+    }
+
+
+    ul.products h4{
+
+      text-align: center;
+      font-family: lobster;
+      color: #aaa8f9;
+
+
+    }
+
+    ul.products p{
+      text-align: center;
+      font-family: lobster;
+      color: #aaa8f9;
+    }
+
+
+
+    .fakeimg {
+      height: 100px;
+    }
+
+    .fakeimage img{
+      max-height: 450px;
+      min-width: auto;
+
+    }
+
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .footer {
+      padding: 20px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .card-img-overlay {
+      color: black;
+    }
+
+    .card-img-overlay h4{
+      padding: 2em;
+    }
+    .card-img-overlay h2 {
+      font-family: lobster;
+      font-size: 4em;
+      padding: 0.5em;
+    }
+
+    .container{
+      position: relative;
+        text-align: center;
+        color: white; 
+      padding-bottom: 4em;
+      border-bottom: 5px dotted black;
+    }
+
+    .container h3{
+      font-family: lobster;
+      color: indigo;
+      font-size: 2.1em;
+      text-decoration: underline;
+    }
+
+    .container p{
+      color: black;
+      font-family: 'comic sans ms';
+      font-size: 25px;
+    }
+
+    .top-left{
+      position: absolute;
+
+    }
+
+
+    .top-right{
+       position: absolute;
+        top: 8px;
+        right: 16px;
+
+    }
+
+    @media screen and (max-width: 1100px) {
+      .leftcolumn,
+      .rightcolumn {
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    @media screen and (max-width: 550px) {
+      .topnav a {
+        float: none;
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 1102px) {
+      .topnav p {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1022px) {
+      .header h1 {
+        font-size: 5em;
+      }
+    }
+
+    @media (max-width: 1022px) {
+      .header p {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 1100px) {
+      .footer
+      {
+        display: none;
+      }
+    }
+
+
+    form {
+      border: 3px solid #f1f1f1;
+      font-family: "comic sans ms";
+      padding: 1.3em;
+      text-align: center;
+    }
+
+
+    input[type=text], input[type=submit] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    input[type=checkbox] {
+      margin-top: 16px;
+    }
+
+    input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      font-family: lobster;
+    }
+
+    input[type=submit]:hover {
+      opacity: 0.8;
+    }
+
+
+
+    .map {
+      width: 100%;
+
+    }
+    #mapa{
+      padding: 1.2em;
+    }
+    #contactanos{
+      text-align: center;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class='header'>
+    <div class="clearfix">
+      <div class='logo'>
+        <h1> <img src="https://media.giphy.com/media/WZmgVLMt7mp44/giphy.gif" width=300px id='logo1'>Licorne</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="topnav">
+    <a href="#">Home</a>
+    <a href="#">Clothing </a>
+    <a href="#">Accessories</a>
+    <a href="#"> My Blog</a>
+    <a href="#"> Contact Us </a>
+    <div id='search'>
+      <p><input style="width: 350px;"> <button type="button"> Search</button> </p>
+    </div>
+  </div>
+  <div class='tabcontent'>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+
+          <div class="fakeimage">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img src="https://img.alicdn.com/imgextra/i4/6000000003138/TB29Z1Hq3ZC2uNjSZFnXXaxZpXa_!!6000000003138-0-tbvideo.jpg" alt="unicorncro">
+                </div>
+
+                <div class="item">
+                  <img src="https://www.blog.bay-bee.co.uk/wp-content/uploads/2018/02/unicorn-home-accessories-3.png" alt="Chicago">
+                </div>
+
+                <div class="item">
+                  <img src="https://i0.wp.com/crystalevekelley.com/wp-content/uploads/2018/04/Surf-n-Turf-Style.png?ssl=1" alt="New York">
+                </div>
+              </div>
+
+              <!-- Left and right controls -->
+
+            </div>
+          </div>
+
+        </div>
+        <div class="card">
+          <div class='productimages'>
+            <h2> Find your favorite Licorne products here ! </h2>
+            <div class='tab-content'>
+              <ul class='products'>
+                <li class='block1'>
+                  <a href='#'>
+              <img src="https://www.unicorn-things.com/wp-content/uploads/2017/01/GUND-Pusheenicorn-Stuffed-Pusheen-Plush-Unicorn-13-0.jpg">
+            <h4>UniCat (Gray)</h4>
+            <p>$30.00</p>
+        </a>
+                </li>
+                <li>
+                  <a href="#">
+            <img src="https://cdn-image.realsimple.com/sites/default/files/styles/portrait_435x518/public/unihorne-charger_0.jpg?itok=RVB0QmAz">
+            <h4> Portable UniCharger</h4>
+            <p>$35.00</p>
+        </a>
+                </li>
+                <li>
+                  <a href="#">
+            <img src="https://cdn.shopify.com/s/files/1/2714/0462/products/41IRZrfbHKL_grande.jpg?v=1516620705">
+            <h4> Unicorn Umbrella (White)</h4>
+            <p>$15.00</p>
+        </a>
+                </li>
+                <li>
+                  <a href="#">
+            <img src="https://cdn.shopify.com/s/files/1/2446/6507/products/product-image-561351396_1024x1024@2x.jpg?v=1526597291">
+            <h4> Fancy UniBag</h4>
+            <p>$50.00</p>
+        </a>
+                </li>
+                <li>
+                  <a href="#">
+            <img src="https://cdn.shopify.com/s/files/1/1755/0539/products/squish_baby_unicorn_15_600x.jpg?v=1523854668">
+            <h4> After Thanksgiving Unicorn</h4>
+            <p>$15.00</p>
+        </a>
+                </li>
+                <li>
+                  <a href="#">
+            <img src="https://www.geschenke.de/out/pictures/generated/product/2/600_600_85/univorn_pen_2.jpg">
+            <h4> Unicorn Pencil Holder</h4>
+            <p>$8.00</p>
+        </a>
+                </li>
+
+                <li>
+                  <a href="#">
+            <img src="https://hips.hearstapps.com/bpc.h-cdn.co/assets/17/43/best-unicorn-gifts-ring.jpg?crop=1xw:1.0xh;center,top&resize=480:*">
+            <h4>UniRing</h4>
+            <p>$5.00</p>
+        </a>
+                </li>
+
+                <li>
+                  <a href="#">
+            <img src="https://m.media-amazon.com/images/I/A1ntnF3PJOL._CLa%7C2140,2000%7C819Bub28QxL.png%7C0,0,2140,2000+0.0,0.0,2140.0,2000.0._UX522_.png">
+            <h4> Lazy Unicorn Shirt (White)</h4>
+            <p>$12.00</p>
+        </a>
+                </li>
+                <!--https://blog.teamtreehouse.com/using-inline-block-to-display-a-product-grid-view-->
+
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+
+            <!-- <h2>TITLE HEADING</h2>
+        <h5>Title description, Sep 2, 2017</h5>
+        <div class="fakeimg" style="height:200px;">Image</div>
+        <p>Some text..</p>
+        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p> -->
+          </div>
+
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card" style=" background-color: #d4fbd3">
+          <h2>Free Shipping</h2>
+          <img class='img-responsive' src='https://ae01.alicdn.com/kf/HTB19NiDPpXXXXckXpXXq6xXFXXX6/1-PCS-Free-Shipping-Cartoon-Acrylic-Brooch-Clothing-Backpack-Accessories-Badges-Decoration-Pins-Brooches.jpg' width='350px'>
+          <h2> On all orders Over $50 </h2>
+
+          <div class="centered"></div>
+
+        </div>
+        <div class="card" style=" background-color: #43e8d8">
+          <form>
+
+            <h2>Subscribe to our Newsletter</h2>
+            <p>You can receive up to 15% off on your first online order!</p>
+
+            <input type="text" placeholder="Name" name="name" required>
+            <input type="text" placeholder="Email address" name="mail" required>
+            <label>
+      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+    </label>
+            <input type="submit" value="Subscribe">
+
+          </form>
+
+        </div>
+
+        <div class="card" style="background-color:#edcdff">
+
+          <h2> Contact Us </h2>
+          <div id='mapa'>
+            <iframe class='map' height="300" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=Guayaquil%2C%20Ecuador+(Licorne)&amp;ie=UTF8&amp;t=&amp;z=13&amp;iwloc=B&amp;output=embed">
+      
+      </iframe></div>
+          <div class="contact-form">
+            <h2 class="subtitle">We are here to assist you !</h2>
+            <form id='contactanos'>
+              <input type="text" name="name" placeholder="Your Name">
+              <input type="text" name="phone" placeholder="Your Phone Number" />
+              <input type="text" name="phone" placeholder="Your E-mail" /><br>
+              <button class="btn-send">Get a Call Back</button>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <div class="footer">
+
+    <div class="card bg text-white ">
+      <img class="card-img " src="https://static1.squarespace.com/static/5594a529e4b0ff871f61e486/t/55a28152e4b0b8ef82d6cf68/1436713300459/unicorn+background+squarespace.png?format=2500w " alt="Card image " height=500px>
+      <div class="card-img-overlay ">
+        <h2 class="card-title ">Our Locations</h2>
+        <div class='container'>
+          <div class='top-left'>
+            <H3> Los Angeles </H3>
+            <p> 4666 Red Maple Drive
+              <BR> Los Angeles
+              <BR> CA, 90017 </p>
+
+          </div>
+          <div class='centered'>
+            <h3> New York </h3>
+            <p> 359 Redbud Drive <br> Garden City <br> NY, 11530 </p>
+          </div>
+          <div class='top-right'>
+            <h3> Ecuador </h3>
+            <p> Entrerios Av. 5ta
+              <BR> Guayaquil, Samborondon
+              <BR> Ecuador </p>
+
+          </div>
+        </div>
+        <h4> Copyright © 2018 </h4>
+
+      </div>
+    </div>
+
+</body>
+
+</html>
+  
+  
+
+</body>
+
+</html>
